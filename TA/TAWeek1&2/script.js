@@ -90,9 +90,6 @@ const gameLogic = (board, playerTiles, validTile, pass) => {
 const gamePlay = (deck, board, playerOne, playerTwo) => {
   let numPass = []
   while (playerOne.length > 0 && playerTwo.length > 0 && numPass.length !== 2) {
-    console.log(`player two has ${playerTwo.length} tiles`)
-
-    console.log('1', numPass)
     const validTilePlayerOne = findValidTile(deck, playerOne, board)
     gameLogic(board, playerOne, validTilePlayerOne, numPass)
 
@@ -102,13 +99,11 @@ const gamePlay = (deck, board, playerOne, playerTwo) => {
     numPass = []
 
     if (playerOne.length > 0) {
-      console.log(`player one has ${playerOne.length} tiles`)
       const validTilePlayerTwo = findValidTile(deck, playerTwo, board)
       gameLogic(board, playerTwo, validTilePlayerTwo, numPass)
 
       console.log('Alice played: ', handDisplay([validTilePlayerTwo]))
       console.log(`Board is now : ${handDisplay(board)}`)
-      console.log('3', numPass)
     } else {
       console.log(
         `Bob won the game!!! Congrats. And Alice's tiles are : ${handDisplay(
