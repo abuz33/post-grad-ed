@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
+
 import { Container, Row, Col } from 'react-bootstrap'
 
-import MovieCard from './components/MovieCard'
-import Comments from './components/Comments'
-import CommentForm from './components/CommentForm'
+import MovieCard from '../UI_Elements/MovieCard'
+import Comments from '../UI_Elements/Comments'
+import CommentForm from '../UI_Elements/CommentForm'
 
-import movieList from './dummyData'
-import initialComments from './initialComments'
+import movieList from '../../dummyData'
+import initialComments from '../../initialComments'
 
-function App() {
+const Movie = () => {
   const [formVisible, setFormVisible] = useState(false)
   const [comments, setComments] = useState(initialComments)
 
@@ -46,4 +47,4 @@ function App() {
   )
 }
 
-export default App
+export default Movie
