@@ -1,0 +1,17 @@
+.comment__header {
+  font-size: 24px !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+.comment__author {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+.comment__details {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.comment__details > * {
+  margin-right: 10px !important;
+}
